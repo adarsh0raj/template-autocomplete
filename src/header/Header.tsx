@@ -40,7 +40,7 @@ const Header: React.FC<IHeaderProps> = ({ notesList, setSelectedNote }) => {
   return (
     <header className={classes.header}>
       <div className={classes.headerLeft}>
-        <h1 className={classes.title}>Notepad</h1>
+        <h1 className={classes.title}>AutoEdit</h1>
       </div>
       <div className={classes.headerCenter}>
         <div className={classes.searchWrapper}>
