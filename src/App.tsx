@@ -1,27 +1,23 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useEffect, useState } from "react";
+import Header from "./header/Header";
+import SidePanel from "./sidepanel/SidePanel";
+import Editor from "./editor/Editor";
 import "./App.css";
+import { INote } from "./common/models";
 
-function App() {
+const App: React.FC = () => {
+  const [notesList, setNotesList] = useState<INote[]>([]);
+  const [selectedNote, setSelectedNote] = useState<INote | null>(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Please write the
-          autocomplete here.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Header notesList={notesList} setSelectedNote={setSelectedNote}/>
+        <div className="main-content">
+          <SidePanel setSelectedNote={setSelectedNote} notesList={notesList}/>
+          <Editor selectedNote={selectedNote} setNotesList={setNotesList}/>
+        </div>
     </div>
   );
-}
+};
 
 export default App;
