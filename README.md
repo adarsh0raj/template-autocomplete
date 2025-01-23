@@ -22,6 +22,13 @@ The editor should be capable of taking keyboard and mouse input
 to freely edit its content. Classic actions like copy and paste, cut, selections should all work as expected.
 The editor should also offer an autocomplete.
 
+### ScreenShots
+
+![Screenshot 1](./assets/s1.png)
+![Screenshot 2](./assets/s2.png)
+![Screenshot 3](./assets/s3.png)
+![Screenshot 3](./assets/s4.png)
+
 ### Autocomplete Process
 
 An autocomplete process should be started when the characters `<>` are typed.
@@ -52,12 +59,3 @@ Share your code on Github with `taylormitchell`. You can also send us a zip arch
 
 We recommend using Vercel https://vercel.com/guides/deploying-react-with-vercel-cra
 Feel free to use another provider if required.
-
-## Get started
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-```
-yarn
-yarn start
-```
